@@ -49,7 +49,7 @@ document.getElementById("calc").addEventListener("submit", function(e) {
     let PerText = Per.value;
     let TotalText = Total.value;
     let PText = Ponly.value;
-    let arr = [BankText, CashText, PerText, TotalText, PText];
+    let arr = [BankText, CashText, PerText, PText, TotalText];
     createTr(arr);
     store();
 
@@ -72,7 +72,6 @@ function createTr(x) {
         let text = document.createTextNode(el);
         td.appendChild(text);
         tr.appendChild(td);
-
     });
     HistoryList.appendChild(tr);
 };

@@ -6,6 +6,15 @@
         font-family: 'Roboto', sans-serif;
     }
     
+    .body {
+        background-image: url("../img/plus\ bg.png");
+        height: 100vh;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    
     .nav-logo {
         width: 35%;
     }
