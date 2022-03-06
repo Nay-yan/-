@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.body {
+    background-image: url("../img/plus\ bg.png");
+    height: 100vh;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.nav-logo {
+    width: 35%;
+}
+
+.plus {
+    display: block;
+    margin: 0;
+    width: 7%;
+    cursor: pointer;
+}
+
+.nav-number {
+    margin: 0;
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 27px;
+    letter-spacing: 1px;
+    color: #3d3d3def;
+    cursor: default;
+}
+
+.ks {
+    padding-left: 5px;
+    font-weight: bold;
+    font-size: 30px;
+    color: #926b15;
+}
+
+.hr {
+    border-top: 3px solid #a2a2a2;
+}
+
+option:hover {
+    background-color: gray;
+}
+
+.btn-dColor {
+    background-color: #005244;
+    color: white;
+}
+
+.btn-dColor p {
+    font-size: 22px;
+}
+
+.btn-dColor:hover {
+    background-color: #026e5c;
+    color: white;
+}
+
+.date {
+    font-size: 19px;
+    font-weight: bold;
+    color: #495057;
+}
+
+th {
+    white-space: nowrap;
+}
+
+input {
+    text-align: right;
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: none;
+    outline: 0;
+    box-shadow: none;
+}
+
+.btn:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+thead {
+    background-color: #005244;
+    color: white;
+}
+
+thead th:last-child {
+    text-align: right;
+}
+
+tfoot td:last-child {
+    text-align: right;
+}
+
+#historyList td:last-child {
+    text-align: right;
+}
+
+.ftotal {
+    text-align: right;
+}
+
+.clear {
+    background-color: #950808;
+}
+
+#rowSpace td {
+    text-align: center !important;
+}
+
+
+/* Phone */
+
+@media (max-width: 767px) {
+    .nav-logo {
+        width: 80%;
+    }
+    .plus {
+        width: 13%;
+    }
+    .nav-number {
+        font-size: 16px;
+    }
+    .ks {
+        font-size: 15px;
+    }
+    .btn-dColor p {
+        font-size: 17px;
+        padding: 5px 0;
+    }
+    .date {
+        font-size: 16px;
+    }
+    .clear {
+        background-color: #950808;
+        padding: 5px 0;
+    }
+}
+
+
+/* taplat  */
+
+@media (min-width:768px) and (max-width:991px) {
+    .nav-logo {
+        width: 65%;
+    }
+    .plus {
+        width: 11%;
+    }
+    .nav-number {
+        font-size: 24px;
+    }
+    .ks {
+        font-size: 25px;
+    }
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* Firefox */
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+/* ******************* */

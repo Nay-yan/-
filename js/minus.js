@@ -1,31 +1,15 @@
 // Tootle Amount
-$(document).ready(function() {
-    $('table thead th').each(function(i) {
-        calculateColumn(i);
-    });
-});
+function sum() {
+    let SUM = document.getElementById("sum");
+    let rows = document.querySelectorAll("table tr td:last-child");
+    let sum = 0;
+    for (let i = 0; i < rows.length - 1; i++) {
+        sum += Number(rows[i].textContent);
+    }
 
-function calculateColumn(index) {
-    var total = 0;
-    $('table tr').each(function() {
-        var value = parseInt($('td', this).eq(index).text());
-        if (!isNaN(value)) {
-            total += value;
-        }
-    });
-    $('table tfoot td').eq(index).text(total + " Ks");
-}
-// function sum() {
-//     let SUM = document.getElementById("sum");
-//     let rows = document.querySelectorAll("table tr td:last-child");
-//     let sum = 0;
-//     for (let i = 0; i < rows.length - 1; i++) {
-//         sum += Number(rows[i].textContent);
-//     }
-
-//     SUM.textContent = sum.toFixed(2) + " Ks";
-// 
-// };
+    SUM.textContent = sum.toFixed(2) + " Ks";
+    Result.textContent = sum.toFixed(2);
+};
 
 // Date 
 let datetoday = document.getElementById("date");
@@ -38,40 +22,41 @@ datetoday.innerHTML = `${day}/${month}/${year}`;
 
 // Calculate 
 
-let Cashin = document.getElementById("validationTooltip01");
-let Cashout = document.getElementById("validationTooltip02");
-let plus = document.getElementById("validationTooltip03");
+let Cash = document.getElementById("validationTooltip01");
+let Per = document.getElementById("validationTooltip02");
+let Total = document.getElementById("validationTooltip03");
 let BankName = document.getElementById("validationTooltip04");
-let minus = document.getElementById("validationTooltip05");
+let Ponly = document.getElementById("validationTooltip05");
+let Result = document.getElementById("Result");
 
 
 let HistoryList = document.getElementById("historyList");
 
-// function parcen(value) {
-//     let x = Cash.value;
-//     let first = (x / 100) * value;
-//     Ponly.value = first.toFixed(2);
-//     let second = +x + first;
-//     Total.value = second.toFixed(2);
-// };
+function parcen(value) {
+    let x = Cash.value;
+    let first = (x / 100) * value;
+    Ponly.value = first.toFixed(2);
+    let second = +x + first;
+    Total.value = second.toFixed(2);
+};
 
 
 document.getElementById("calc").addEventListener("submit", function(e) {
     e.preventDefault();
     let BankText = BankName.value;
-    let CashIn = Cashin.value;
-    let CashOut = Cashout.value;
-    let Plus = plus.value;
-    let Minus = minus.value;
-    let arr = [BankText, CashIn, CashOut, Plus, Minus];
+    let CashText = Cash.value;
+    let PerText = Per.value;
+    let TotalText = Total.value;
+    let PText = Ponly.value;
+    let arr = [BankText, CashText, PerText, PText, TotalText];
     createTr(arr);
     store();
 
     BankName.value = "";
-    CashIn.value = "";
-    CashOut.value = "";
-    Plus.value = "";
-    Minus.value = "";
+    Cash.value = "";
+    Per.value = "";
+    Total.value = "";
+    Ponly.value = "";
 });
 
 function createTr(x) {

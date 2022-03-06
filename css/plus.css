@@ -97,22 +97,6 @@
         color: white;
     }
     
-    thead th:last-child {
-        text-align: right;
-    }
-    
-    tfoot td:last-child {
-        text-align: right;
-    }
-    
-    #historyList td:last-child {
-        text-align: right;
-    }
-    
-    .ftotal {
-        text-align: right;
-    }
-    
     .clear {
         background-color: #950808;
     }

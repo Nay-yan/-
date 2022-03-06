@@ -23,8 +23,7 @@
                 <a href="./index.html"><img src="./img/nav-logo.png" class="nav-logo"></a>
             </div>
             <div class="col-6 d-flex justify-content-end align-items-center">
-                <img src="./img/Plus.png" alt="plus" class="plus shadow" onclick="sum()">
-                <div class="nav-number" id="Result">0.00</div><span class="ks">Ks</span>
+                <button class="btn alert-info btn-sm shadow" onclick="myFunction()" type="submit">Total</button>
             </div>
         </div>
         <hr class="hr">
@@ -34,38 +33,48 @@
         <form id="calc">
             <div class="form-row">
                 <div class="col-12 col-md-6 col-lg-4 mb-3">
-                    <label for="validationTooltip01">Cash</label>
-                    <input type="number" class="form-control" id="validationTooltip01" value="" placeholder="0.00" required autofocus min="1">
+                    <label for="validationTooltip04">Bank Name</label>
+                    <select class="custom-select" id="validationTooltip04" required>
+                        <option selected disabled value="">Choose Bank...</option>
+                        <option>Wave +</option>
+                        <option>Wave -</option>
+                        <option>Wave Agent +</option>
+                        <option>Wave Agent -</option>
+                        <option>KPay +</option>
+                        <option>KPay -</option>
+                        <option>AYA Pay +</option>
+                        <option>AYA Pay -</option>
+                        <option>OK$ +</option>
+                        <option>OK$ -</option>
+                        <option>CB +</option>
+                        <option>CB -</option>
+                        <option>AYA +</option>
+                        <option>AYA -</option>
+                        <option>KBZ +</option>
+                        <option>KBZ -</option>
+                        <option>YOMA +</option>
+                        <option>YOMA -</option>
+                    </select>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4 mb-3">
-                    <label for="validationTooltip02">Percentage</label>
+                    <label for="validationTooltip01">Cash In</label>
+                    <input type="number" class="form-control" id="validationTooltip01" value="" placeholder="0.00" autofocus>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                    <label for="validationTooltip02">Cash Out</label>
                     <div class="d-flex">
-                        <input type="number" class="form-control" id="validationTooltip02" value="" placeholder="0.00" required step="0.000001" min="1" onkeyup="parcen(this.value)">
+                        <input type="number" class="form-control" id="validationTooltip02" value="" placeholder="0.00">
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4 mb-3">
-                    <label for="validationTooltip03">Total Amount</label>
-                    <input type="number" class="form-control" id="validationTooltip03" value="" placeholder="Total Amount" step="0.000001" required>
+                    <label for="validationTooltip03">Plus &#43;</label>
+                    <input type="number" class="form-control" id="validationTooltip03" value="" placeholder="&#43; %">
                 </div>
                 <div class="col-12 col-md-6 col-lg-4 mb-3">
-                    <label for="validationTooltip05">% Only</label>
-                    <input type="number" class="form-control" id="validationTooltip05" value="" placeholder="% Amount" step="0.000001" required>
+                    <label for="validationTooltip05">Minus &#8722;</label>
+                    <input type="number" class="form-control" id="validationTooltip05" value="" placeholder="&#8722; %">
                 </div>
-                <div class="col-12 col-md-6 col-lg-4 mb-3">
-                    <label for="validationTooltip04">Bank Name</label>
-                    <select class="custom-select" id="validationTooltip04" required>
-                          <option selected disabled value="">Choose Bank...</option>
-                          <option>K Pay</option>
-                          <option>AYA Pay</option>
-                          <option>Wave Pay</option>
-                          <option>Wave Agent</option>
-                          <option>OK$</option>
-                          <option>CB Bank</option>
-                          <option>AYA Bank</option>
-                          <option>KBZ Bank</option>
-                          <option>Yoma Bank</option>
-                        </select>
-                </div>
+
                 <button class="btn btn-dColor form-group col-12 col-md-6 col-lg-4 shadow"><p class="m-0">Calculate <i class="feather-check-circle"></i></p></button>
             </div>
         </form>
@@ -78,44 +87,47 @@
 
         <!-- Table  -->
         <div class="table-responsive">
-            <table class="table table-hover" id="table">
+            <!-- <table class="table table-hover" id="table"> -->
+            <table class="table table-hover" id="sum_table">
                 <thead>
                     <tr>
                         <th scope="col">Bank Name</th>
-                        <th scope="col">Cash</th>
-                        <th scope="col">Percentage</th>
-                        <th scope="col">% Only</th>
-                        <th scope="col">Total Amount</th>
+                        <th scope="col">Cash In</th>
+                        <th scope="col">Cash Out</th>
+                        <th scope="col">&#43;</th>
+                        <th scope="col">&#8722;</th>
+
                     </tr>
                 </thead>
                 <tbody id="historyList">
                     <!-- <tr>
-                            <td>Aya</td>
-                            <td>10000</td>
-                            <td>1.5</td>
-                            <td>101500</td>
-                            <td>1500</td>
-                        </tr>
-                        <tr>
-                            <td>Aya</td>
-                            <td>10000</td>
-                            <td>1.5</td>
-                            <td>101500</td>
-                            <td>1500</td>
-                        </tr> -->
+                        <td>Aya</td>
+                        <td>10000</td>
+                        <td>1.5</td>
+                        <td>101500</td>
+                        <td>1500</td>
+                    </tr>
+                    <tr>
+                        <td>Aya</td>
+                        <td>10000</td>
+                        <td>1.5</td>
+                        <td>101500</td>
+                        <td>1500</td>
+                    </tr> -->
                 </tbody>
                 <tfoot>
-                    <tr>
+                    <tr class="font-weight-bold">
                         <td></td>
                         <td></td>
                         <td></td>
-                        <td class="ftotal"> <button onclick="sum()" class="btn alert-info btn-sm shadow">Total</button></td>
-                        <td id="sum" class="font-weight-bold"></td>
+                        <td></td>
+                        <td></td>
                     </tr>
 
                 </tfoot>
             </table>
         </div>
+        <!-- <button class="btn alert-info btn-sm shadow" onclick="myFunction()" type="submit">Total</button> -->
 
         <!-- Clear  -->
         <button class="btn btn-danger w-100 clear my-2" id="clear">Clear History <i class="feather-trash-2"></i></button>
@@ -126,6 +138,8 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- total Amount -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <script src="./js/plus.js"></script>
 
