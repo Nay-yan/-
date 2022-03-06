@@ -46,7 +46,6 @@ let minus = document.getElementById("validationTooltip05");
 
 
 let HistoryList = document.getElementById("historyList");
-
 // function parcen(value) {
 //     let x = Cash.value;
 //     let first = (x / 100) * value;
@@ -54,7 +53,6 @@ let HistoryList = document.getElementById("historyList");
 //     let second = +x + first;
 //     Total.value = second.toFixed(2);
 // };
-
 
 document.getElementById("calc").addEventListener("submit", function(e) {
     e.preventDefault();
@@ -66,12 +64,11 @@ document.getElementById("calc").addEventListener("submit", function(e) {
     let arr = [BankText, CashIn, CashOut, Plus, Minus];
     createTr(arr);
     store();
-
     BankName.value = "";
-    CashIn.value = "";
-    CashOut.value = "";
-    Plus.value = "";
-    Minus.value = "";
+    Cashin.value = "";
+    Cashout.value = "";
+    plus.value = "";
+    minus.value = "";
 });
 
 function createTr(x) {
