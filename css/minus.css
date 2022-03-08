@@ -69,6 +69,7 @@ option:hover {
     font-size: 19px;
     font-weight: bold;
     color: #495057;
+    display: inline-block;
 }
 
 th {
@@ -95,22 +96,6 @@ input {
 thead {
     background-color: #005244;
     color: white;
-}
-
-thead th:last-child {
-    text-align: right;
-}
-
-tfoot td:last-child {
-    text-align: right;
-}
-
-#historyList td:last-child {
-    text-align: right;
-}
-
-.ftotal {
-    text-align: right;
 }
 
 .clear {
