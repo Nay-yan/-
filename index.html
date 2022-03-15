@@ -7,20 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./vendor/animate_it/animate.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="./img/logo.png">
     <title>Yumm Money</title>
 </head>
 
 <body class="body position-relative">
-    <img src="./img/left.png" class="left-img">
-    <img src="./img/right.png" class="right-img">
+    <div><img src="./img/left.png" class="left-img " id="left" data-tilt data-tilt-reverse="true"></div>
+    <img src="./img/right.png" class="right-img" id="right" data-tilt data-tilt-reset="false">
     <div class="container vh-100 ">
         <div class="d-flex justify-content-center align-items-center vh-100 flex-column">
-            <a href="./plus.html"><button type="button" class="btn btn-light buttom">Cash In / Cash Out</button></a>
-
-
-
+            <a href="./plus.html"><button type="button" class="btn btn-light buttom" data-tilt data-tilt-reverse="true">Cash In / Cash Out</button></a>
         </div>
     </div>
 
@@ -29,7 +27,12 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./vendor/vanilla-tilt.js"></script>
+    <script src="./vendor/wow/wow.js"></script>
     <script src="./js/app.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 </body>
 
 </html>

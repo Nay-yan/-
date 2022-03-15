@@ -13,6 +13,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 .buttom {
@@ -34,14 +35,15 @@
 }
 
 .left-img {
-    width: 22%;
-    top: 40%;
+    width: 24%;
+    top: 54%;
+    left: 6%;
     position: absolute;
 }
 
 .right-img {
-    width: 22%;
-    top: 40%;
+    width: 25%;
+    top: 5%;
     right: 0;
     position: absolute;
 }
@@ -57,7 +59,19 @@
         font-size: 16px;
         border-radius: 100px;
         margin: 30px 0;
-        padding: 15px 90px;
+        padding: 13px 50px;
+    }
+    .right-img {
+        width: 42%;
+        top: 14%;
+        right: 0;
+        position: absolute;
+    }
+    .left-img {
+        width: 49%;
+        top: 69%;
+        position: absolute;
+        left: 0;
     }
 }
 
@@ -73,5 +87,17 @@
         border-radius: 100px;
         margin: 30px 0;
         padding: 15px 90px;
+    }
+    .right-img {
+        width: 30%;
+        top: 7%;
+        right: 32px;
+        position: absolute;
+    }
+    .left-img {
+        width: 31%;
+        top: 68%;
+        left: 6%;
+        position: absolute;
     }
 }

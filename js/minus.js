@@ -46,7 +46,6 @@ function tableclick(e) {
         deleteRow(e.target.parentNode.parentNode.rowIndex);
 }
 document.getElementById("sum_table").addEventListener("click", function() {
-
     if (confirm('Do you really want to Delect List?')) {
         // delect it!
         tableclick();
@@ -54,7 +53,6 @@ document.getElementById("sum_table").addEventListener("click", function() {
         // undelect it!
         e.preventDefault;
     }
-
 });
 
 // Calculate 
@@ -84,7 +82,7 @@ document.getElementById("calc").addEventListener("submit", function(e) {
     };
 
     HistoryList.innerHTML += `  <tr id="list-${i}">
-                                    <td> <input type="button" onclick="remove(${i})" value="Del" class="btn btn-danger brn-sm" /></td>
+                                    <td><input type="button" id="remove" value="Del" class="btn btn-danger brn-sm" /></td>
                                     <td>${BankText}</td>
                                     <td>${CashIn}</td>
                                     <td>${CashOut}</td>
